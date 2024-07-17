@@ -1,0 +1,12 @@
+prefix=c:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library
+exec_prefix=c:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library
+libdir=c:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library/lib
+includedir=c:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++ 
+Requires.private: 
+Cflags: -I${includedir} 

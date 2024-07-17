@@ -1,0 +1,13 @@
+prefix=C:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library
+exec_prefix=C:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library
+libdir=C:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library/lib
+sharedlibdir=C:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library/lib
+includedir=C:/Users/Tharun/Desktop/NON_core/NLP/Projects/chat_csv/BIGquery/bigenv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
