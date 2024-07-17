@@ -1,0 +1,743 @@
+{
+  "Multiple Clients Data":[
+    {
+      "name": "stellar-display-145814.intern_ai_am.product_performance_data_multiple_clients",
+      "description":"The data consists of daily performance metrics for products across multiple clients. The data includes views, paid views, organic views, tracking data, ad spends, and revenue.",
+      "columns":[
+        {
+          "name": "product_id",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The unique identifier for a product.",
+          "fields": []
+        },
+        {
+          "name": "variant_id",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The unique identifier for a product variant.",
+          "fields": []
+        },
+        {
+          "name": "date",
+          "mode": "NULLABLE",
+          "type": "DATE",
+          "description": "The date of the record.",
+          "fields": []
+        },
+        {
+          "name": "parse_client_id",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The unique identifier for the client.",
+          "fields": []
+        },
+        {
+          "name": "product_name",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The name of the product.",
+          "fields": []
+        },
+        {
+          "name": "product_source",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The source of the product data.",
+          "fields": []
+        },
+        {
+          "name": "views",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The total number of views for the product.",
+          "fields": []
+        },
+        {
+          "name": "paid_views",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of paid views for the product.",
+          "fields": []
+        },
+        {
+          "name": "fb_paid_views",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of paid views for the product from Facebook.",
+          "fields": []
+        },
+        {
+          "name": "google_paid_views",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of paid views for the product from Google.",
+          "fields": []
+        },
+        {
+          "name": "organic_views",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of organic views for the product.",
+          "fields": []
+        },
+        {
+          "name": "tracking_add_to_carts",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of times a product was added to a cart.",
+          "fields": []
+        },
+        {
+          "name": "tracking_purchases",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of purchases made.",
+          "fields": []
+        },
+        {
+          "name": "tracking_purchases_value",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The total value of purchases made.",
+          "fields": []
+        },
+        {
+          "name": "fb_spends",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The amount of money spent on Facebook ads.",
+          "fields": []
+        },
+        {
+          "name": "fb_clicks",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of clicks on Facebook ads.",
+          "fields": []
+        },
+        {
+          "name": "fb_impressions",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of impressions from Facebook ads.",
+          "fields": []
+        },
+        {
+          "name": "google_spends",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The amount of money spent on Google ads.",
+          "fields": []
+        },
+        {
+          "name": "google_clicks",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of clicks on Google ads.",
+          "fields": []
+        },
+        {
+          "name": "google_impressions",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "The number of impressions from Google ads.",
+          "fields": []
+        },
+        {
+          "name": "google_purchases",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The number of purchases made through Google ads.",
+          "fields": []
+        },
+        {
+          "name": "google_purchases_value",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The total value of purchases made through Google ads.",
+          "fields": []
+        },
+        {
+          "name": "website_revenue",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The total value of purchases made from your website. $WebsiteRevenue",
+          "fields": []
+        },
+        {
+          "name": "website_quantity_ordered",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Total number of units purchased.",
+          "fields": []
+        },
+        {
+          "name": "estimated_total_spends",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The estimated total amount of money spent during the selected period.",
+          "fields": []
+        },
+        {
+          "name": "website_fb_revenue",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The total value of purchases made from your website through Facebook ads.",
+          "fields": []
+        },
+        {
+          "name": "website_google_revenue",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "The total value of purchases made from your website through Google ads.",
+          "fields": []
+        }
+      ],
+      "primaryKey": ["product_id", "date", "parse_client_id"],
+      "foreignKeys": [
+        {
+          "columns": ["parse_client_id"],
+          "references":{
+            "table": "stellar-display-145814.intern_ai_am.client_id_website_data",
+            "columns":["parse_client_id"]
+          }
+        },
+        {
+          "columns": ["product_id", "parse_client_id"],
+          "references": {
+            "table": "stellar-display-145814.intern_ai_am.product_catalog_data_multiple_clients",
+            "columns": ["productSku"]
+          }
+        }
+      ]      
+    },
+    {
+      "name": "stellar-display-145814.intern_ai_am.product_catalog_data_multiple_clients",
+      "description":"This table consists of product level configuration data",
+      "columns": [
+        {
+          "name": "parse_client_id",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Unique identifier for the client",
+          "fields": []
+        },
+        {
+          "name": "productSku",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Same as product id and unique identifier",
+          "fields": []
+        },
+        {
+          "name": "productCategoryLevel1",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Top level category of the product",
+          "fields": []
+        },
+        {
+          "name": "price",
+          "mode": "NULLABLE",
+          "type": "NUMERIC",
+          "description": "Current price of the product",
+          "fields": []
+        },
+        {
+          "name": "original_price",
+          "mode": "NULLABLE",
+          "type": "NUMERIC",
+          "description": "Original price of the product before any discounts",
+          "fields": []
+        },
+        {
+          "name": "pagePath",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "URL path of the product page",
+          "fields": []
+        },
+        {
+          "name": "productName",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Name of the product",
+          "fields": []
+        },
+        {
+          "name": "availability",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Availability status of the product",
+          "fields": []
+        },
+        {
+          "name": "product_category_list",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "List of categories the product belongs to",
+          "fields": []
+        },
+        {
+          "name": "partition_key",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Key used for partitioning data",
+          "fields": []
+        },
+        {
+          "name": "image_url",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "URL of the product image",
+          "fields": []
+        },
+        {
+          "name": "partner",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Partner associated with the product",
+          "fields": []
+        },
+        {
+          "name": "item_group_id",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Identifier for the item group",
+          "fields": []
+        },
+        {
+          "name": "small_image_url",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "URL of the small version of the product image",
+          "fields": []
+        },
+        {
+          "name": "google_title",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Title of the product for Google listings",
+          "fields": []
+        },
+        {
+          "name": "google_product_category",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Google's category for the product",
+          "fields": []
+        },
+        {
+          "name": "product_type",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Type of the product",
+          "fields": []
+        },
+        {
+          "name": "google_product_type",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Google's type classification for the product",
+          "fields": []
+        },
+        {
+          "name": "product_gender",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Target gender for the product",
+          "fields": []
+        },
+        {
+          "name": "color",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Color of the product",
+          "fields": []
+        },
+        {
+          "name": "date_added",
+          "mode": "NULLABLE",
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the product was added",
+          "fields": []
+        },
+        {
+          "name": "custom_label_1",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom label 1 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_label_2",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom label 2 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_label_4",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom label 4 for the product",
+          "fields": []
+        },
+        {
+          "name": "client_exclude",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Flag to exclude the product from client view",
+          "fields": []
+        },
+        {
+          "name": "size",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Size of the product",
+          "fields": []
+        },
+        {
+          "name": "material",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Material of the product",
+          "fields": []
+        },
+        {
+          "name": "loss_product_exclude_flag",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Flag to exclude loss product",
+          "fields": []
+        },
+        {
+          "name": "loss_product_exclude_flag_fb",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Flag to exclude loss product on Facebook",
+          "fields": []
+        },
+        {
+          "name": "loss_product_exclude_flag_gaw",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Flag to exclude loss product on Google Ads",
+          "fields": []
+        },
+        {
+          "name": "days_added",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Number of days since the product was added",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_1",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 1 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_2",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 2 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_3",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 3 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_4",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 4 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_5",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 5 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_6",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 6 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_7",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 7 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_8",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 8 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_9",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 9 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_10",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 10 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_11",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 11 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_12",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 12 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_13",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 13 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_14",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 14 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_15",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 15 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_16",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 16 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_17",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 17 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_18",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 18 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_19",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 19 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_attribute_20",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Custom attribute 20 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_1",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 1 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_2",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 2 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_3",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 3 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_4",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 4 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_5",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 5 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_6",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 6 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_7",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 7 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_8",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 8 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_9",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 9 for the product",
+          "fields": []
+        },
+        {
+          "name": "custom_number_attribute_10",
+          "mode": "NULLABLE",
+          "type": "FLOAT",
+          "description": "Custom numeric attribute 10 for the product",
+          "fields": []
+        },
+        {
+          "name": "more_info",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Additional information about the product",
+          "fields": []
+        },
+        {
+          "name": "inventory_quantity",
+          "mode": "NULLABLE",
+          "type": "INTEGER",
+          "description": "Quantity of the product in inventory",
+          "fields": []
+        },
+        {
+          "name": "discount_percentage",
+          "mode": "NULLABLE",
+          "type": "NUMERIC",
+          "description": "Discount percentage applied to the product",
+          "fields": []
+        },
+        {
+          "name": "price_bucket",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Price range category of the product",
+          "fields": []
+        },
+        {
+          "name": "discount_bucket",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Discount range category of the product",
+          "fields": []
+        },
+        {
+          "name": "availability_reason",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Reason for the availability status of the product",
+          "fields": []
+        },
+        {
+          "name": "active_product",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Indicator if the product is active",
+          "fields": []
+        }
+      ],
+      "primaryKey": ["product_id", "parse_client_id"],
+      "foreignKeys": [
+        {
+          "columns": ["parse_client_id"],
+          "references":{
+            "table": "stellar-display-145814.intern_ai_am.client_id_website_data",
+            "columns":["parse_client_id"]
+          }
+        }
+      ]     
+    },
+    {
+      "name": "stellar-display-145814.intern_ai_am.client_id_website_data",
+      "description":"This table consists of client ids, website URLs, business names, and brand names for multiple clients.",
+      "columns":[
+        {
+          "name": "parse_client_id",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "A unique identifier assigned to each client for parsing purposes.",
+          "fields": []
+        },
+        {
+          "name": "website",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The URL of the client's website.",
+          "fields": []
+        },
+        {
+          "name": "business_name",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "The official name of the client's business.",
+          "fields": []
+        },
+        {
+          "name": "brand",
+          "mode": "NULLABLE",
+          "type": "STRING",
+          "description": "Every client manages multiple brands. This field specifies the brand associated with the client.",
+          "fields": []
+        }
+      ],
+      "primaryKey": ["parse_client_id"]      
+    }
+  ]
+}

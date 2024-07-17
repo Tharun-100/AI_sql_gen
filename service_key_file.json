@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stellar-display-145814",
+  "private_key_id": "d1be3ded12aa47ceb180c508917bde30acf03a5d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQbeZlylfGaJGH\nN9Dcdr04OY8wul9dMwn8zdOZg1jz47VElm4dYcmiQBza8KLGSJTzzpl2VH6B5lOq\nxk2C4mPcTc6e2R6GCL8fHl3LBkuesKwUUU8RRfE9KuH0q3ohP8R+69gMRlkuC0hO\nv0ZDINfeoVZI6njghwvVoLYB2kjexP7ap1t+8mqJTFKBPlfbpzIzS1dpRtO9u0RK\nleowIOiQcaDdyxN0JJ7ghzZMItUG58uYvsB3klmXsg15P+87avAuaoLVeU8QDLqF\n0vy2tw7sdQ3bJjssYU9DMO8me3Ic8qJuksYYzG4zCcHSAHbFULVrTaMiSVqIF5Yz\nXCzp1brlAgMBAAECggEABMjVPf+OcXN/Gf9Z/DRyDS+GZll0T/XVbU+mDgxWzVPE\nghxiwtr/66fd6tibIIX1lMzKIcIHrwUoohbRliijJUvwzOByCsMYx9qjVaPHnhUz\nJUbS7CHMoL3mPNpGXr2j0+qztLT/1/phg8E/2z9XvBcFr97zvPaSvf801sE9LeSq\nD9NupjoxzMFCgQ5FAWJQ0nE1SKx2xRIqanHu8jcIm7vny66DLDZoJjkQ6is+vCEv\n//PpYvgvDHWsVA3gBScj1v6Gu/AKte+3Ypu9IeKyiEqp5h2DcoUBlx4r54I9RnUY\nDVdEHFwWmFRUyinu8hlUkSXXkIL9UsCfTiOWAi4/bwKBgQDuDmUS6c2czjIEPUXa\nt2Albbd7sudKK/H74Oh3gtrtLy+hNyrMBILGyZuLwWGhlw2F0ma27mb24Oqq81sN\njpLzce7X7bjNASzFrFtBDT+YRNcyEb7nMDbocNwqcXevaN67b2Ud1dxj80MFGWa0\nAPtG0ftBoHYvyJVBx7p7HkJvHwKBgQDgI9CctguDVPnp6Rl4dt8SN8IuouART+0p\nd9ff3957S77cFEp1aWhWygd7NCYjckOuXfxfeWJ3znWJx99A3d59xd1zT7aoXZbn\ndd7drqxuipDVKNNTJyL7DnLeMol4uWt0ptDOl6vW0e4Mv8EWU1gw+EMYNM2PLrGx\n++g7YvXJewKBgQCguAs5J6xvjy5pekytC1zYKCjWVMSeaOjomsGX3jqcI11OxIYa\nU3lPaFGhmx+lDuxMSu6Z1n6hctw8KixxDK7duS/9jDtV/NMTaff6BU3IKcH3xc9T\nGlQXvgqGhTC+tliZxu1HpVk0CcpXqPyTzo3XFHFDr2fbftp2HLgj4xwLFQKBgAva\nmQvQrOczNUxjoY83ajDCdiiVQJhpy7cnuWkDo/aNWPi2sgFno7cDVEX1yhaR0naE\nTfaWqth/OMQip/H8SeoI7t9MVfKtkG+JUlITDNeDyIkdcZ+yMC1q5DRQI+kYlVBE\nCkMCznm7/IT8FzAhFEbyukmrcTujUo6BLhUF9M3FAoGBANPwFJlhU1+b7gw6uAyG\nFFaBgeJdcGg/TmVk2IMrcTj1Az6zOdI9DIqY2FrfwNsASKLiyPFvgg9EWxjLkOPH\nPH3IdePTZSLBUwE2UzHJMznb/PmqjQ9OcWql4VhAl+1vkxiZhxtLQFHwAbE92OXy\n6ogdxItPofiiLPkiX0wDvVTw\n-----END PRIVATE KEY-----\n",
+  "client_email": "ai-am-bigquery-dataset-service@stellar-display-145814.iam.gserviceaccount.com",
+  "client_id": "116088651854585537611",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ai-am-bigquery-dataset-service%40stellar-display-145814.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
