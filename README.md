@@ -61,8 +61,8 @@ Before you begin, ensure you have met the following requirements:
 instructions for usage in the command prompt, move to the project directory
 ```bash
     python app.py
-    ```
-
+ ```
+create a new file to post the query for getting the SQL query and DATA
 ```python
 # python script to call the local host 
 import requests
@@ -73,7 +73,8 @@ query_data = {
     'query': "give me top 10 products based on website revenue" 
 }
 
-response = requests.post(url1, json=query_data)
+response1 = requests.post(url1, json=query_data)
 response = requests.post(url2, json=query_data)
-print(response.json())  
- 
+print("User Query:",query_data["query"])
+print("SQL QUERY:",response.json())  
+print("DATA",response1.json())  
