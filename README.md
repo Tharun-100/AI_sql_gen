@@ -69,15 +69,15 @@ OPENAI_API_KEY=your_openai_api_key
 GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_credentials_json
 BIGQUERY_PROJECT_ID=your_bigquery_project_id
 SCHEMA_FILE_PATH=path_to_your_schema_file.json
+``` 
 
 ## Usage
-Run the Flask application:
-``` 
-bash
+Run the Flask application: 
+```bash
 python app.py
-```
+``` 
 The application will be available at http://0.0.0.0:8000.
-/query
+### /query
 
     Method: POST
     Description: Translate natural language query to SQL, execute it, and return the results.
@@ -89,7 +89,7 @@ The application will be available at http://0.0.0.0:8000.
 {
   "result": [ ... ]  // Query results as a list of records
 }
-/sql
+### /sql
 
     Method: POST
     Description: Translate natural language query to SQL and return the SQL query.
@@ -97,9 +97,26 @@ The application will be available at http://0.0.0.0:8000.
 {
   "query": "Your natural language query"
 }
-Response:
+### Response:
 
 {
   "result": "Translated SQL query"
 }
 
+### Contributing
+
+To contribute to this project, please follow these steps:
+
+    Fork the repository.
+    Create a new branch (git checkout -b feature-branch).
+    Make your changes.
+    Commit your changes (git commit -m 'Add some feature').
+    Push to the branch (git push origin feature-branch).
+    Create a new Pull Request.
+# License
+### MIT License
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
