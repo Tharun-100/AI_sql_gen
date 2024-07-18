@@ -1,19 +1,68 @@
-# AI_sql_gen
+# AI Analytics
 
-i) Libraries and sofrtware installation 
-  1) install python from https://www.python.org/
-     after installing python check the version of python got installed in your system.
-     you can create virtual environment for we need to install virtualenv from the command prompt
-     'pip install virtualenv"
-     
-  3) Anaconda installation : https://www.anaconda.com/download/success
-     based on your operating system windows/linux/mac
+In this project we will generate a sql query and retrieve the data from bigquery by passing natural language query using gpt-4o model.
 
-     
-     
-  5) 
-  6) 
+## Table of Contents
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Setting up the environment](#setting-up-the-environment)
+  - [Installing dependencies](#installing-dependencies)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
- 
+## Installation
 
-  
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have installed [Python 3.x](https://www.python.org/downloads/).
+
+### Setting up the environment
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/your-repository-name.git
+    cd your-repository-name
+    ```
+
+2. **Create a virtual environment**:
+    ```bash
+    python -m venv env
+    ```
+
+3. **Activate the virtual environment**:
+
+    - **On Windows**:
+        ```bash
+        .\env\Scripts\activate
+        ```
+
+    - **On macOS and Linux**:
+        ```bash
+        source env/bin/activate
+        ```
+
+### Installing dependencies
+
+1. **Upgrade pip**:
+    ```bash
+    pip install --upgrade pip
+    ```
+
+2. **Install the required packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+Provide instructions and examples for using your project. Include code snippets, if necessary.
+
+```python
+# Example usage
+import your_module
+
+result = your_module.your_function()
+print(result)
