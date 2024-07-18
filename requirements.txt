@@ -3,3 +3,5 @@ uvicorn
 openai
 flask
 google-cloud-bigquery
+dotenv
+db-type
