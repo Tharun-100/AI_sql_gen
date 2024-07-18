@@ -1,4 +1,5 @@
 fastapi
 uvicorn
 openai
+flask
 google-cloud-bigquery
