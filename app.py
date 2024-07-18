@@ -72,7 +72,9 @@ def handle_query():
         return jsonify({"result": df.to_dict(orient='records')})
     except Exception as e:
         return jsonify({"error": f"Error processing query: {e}"}), 500
-@app.route('/SQL_query', methods=['POST'])
+
+
+@app.route('/sql', methods=['POST'])
 def handle_SQL_query():
     data = request.json
     user_message = data.get('query')
@@ -81,7 +83,7 @@ def handle_SQL_query():
     try:
         final_sql_query = recheck_sql(user_message, schema, retries=0, max_retries=5)
         df = dataframe_from_query(final_sql_query)
-        return jsonify({"SQL_query": final_sql_query})
+        return jsonify({"result": final_sql_query})
     except Exception as e:
         return jsonify({"error": f"Error processing query: {e}"}), 500
 if __name__ == '__main__':
