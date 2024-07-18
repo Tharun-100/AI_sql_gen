@@ -58,7 +58,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-instructions for usage in the command prompt, move to the project directory
+instructions for usage in the command prompt, move to the project directory and run the following command after activating the environment
 ```bash
     python app.py
  ```
