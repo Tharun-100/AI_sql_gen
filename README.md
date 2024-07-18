@@ -1,13 +1,15 @@
-# AI Analytics
+# AI Analytics(Natural Language to SQL Query Translator)
 
-In this project we will generate a sql query and retrieve the data from bigquery by passing natural language query using gpt-4o model.
+In this project, we will generate an SQL query and retrieve data from BigQuery by passing natural language queries using the GPT-40 model.
 
 ## Table of Contents
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Setting up the environment](#setting-up-the-environment)
   - [Installing dependencies](#installing-dependencies)
+  - [Setting up environment variables](#setting-up-environment-variables)
 - [Usage](#usage)
+- [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -18,13 +20,15 @@ In this project we will generate a sql query and retrieve the data from bigquery
 Before you begin, ensure you have met the following requirements:
 
 - You have installed [Python 3.x](https://www.python.org/downloads/).
+- You have a Google Cloud account with BigQuery enabled.
+- You have an OpenAI API key.
 
 ### Setting up the environment
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/Tharun-100/AI_sql_gen.git
-    cd AI_sql_gen
+    git clone https://github.com/your-username/your-repository-name.git
+    cd your-repository-name
     ```
 
 2. **Create a virtual environment**:
@@ -56,25 +60,46 @@ Before you begin, ensure you have met the following requirements:
     pip install -r requirements.txt
     ```
 
+### Setting up environment variables
+
+Create a `.env` file in the root directory of your project and add the following environment variables:
+
+```plaintext
+OPENAI_API_KEY=your_openai_api_key
+GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_credentials_json
+BIGQUERY_PROJECT_ID=your_bigquery_project_id
+SCHEMA_FILE_PATH=path_to_your_schema_file.json
+
 ## Usage
+Run the Flask application:
+``` 
+bash
+python app.py
+```
+The application will be available at http://0.0.0.0:8000.
+/query
 
-instructions for usage in the command prompt, move to the project directory and run the following command after activating the environment
-```bash
-    python app.py
- ```
-create a new file to post the query for getting the SQL query and DATA
-```python
-# python script to call the local host 
-import requests
+    Method: POST
+    Description: Translate natural language query to SQL, execute it, and return the results.
+    Request body:
+{
+  "query": "Your natural language query"
+}
+### Response
+{
+  "result": [ ... ]  // Query results as a list of records
+}
+/sql
 
-url1 = 'http://localhost:8000/query'
-url2 = 'http://localhost:8000/sql'
-query_data = {
-    'query': "give me top 10 products based on website revenue" 
+    Method: POST
+    Description: Translate natural language query to SQL and return the SQL query.
+    Request body:
+{
+  "query": "Your natural language query"
+}
+Response:
+
+{
+  "result": "Translated SQL query"
 }
 
-response1 = requests.post(url1, json=query_data)
-response = requests.post(url2, json=query_data)
-print("User Query:",query_data["query"])
-print("SQL QUERY:",response.json())  
-print("DATA",response1.json())  
