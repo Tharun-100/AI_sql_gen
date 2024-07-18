@@ -58,11 +58,22 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-Provide instructions and examples for using your project. Include code snippets, if necessary.
+instructions for usage in the command prompt, move to the project directory
+```bash
+    python app.py
+    ```
 
 ```python
-# Example usage
-import your_module
+# python script to call the local host 
+import requests
 
-result = your_module.your_function()
-print(result)
+url1 = 'http://localhost:8000/query'
+url2 = 'http://localhost:8000/sql'
+query_data = {
+    'query': "give me top 10 products based on website revenue" 
+}
+
+response = requests.post(url1, json=query_data)
+response = requests.post(url2, json=query_data)
+print(response.json())  
+ 
