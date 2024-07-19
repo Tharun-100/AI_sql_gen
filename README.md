@@ -1,6 +1,6 @@
 # AI Analytics(Natural Language to SQL Query Translator)
 
-In this project, we will generate an SQL query and retrieve data from BigQuery by passing natural language queries using the GPT-40 model.
+In this project, we will generate an SQL query and retrieve data from BigQuery by passing natural language queries using the GPT-4o model.
 
 ## Table of Contents
 - [Installation](#installation)
