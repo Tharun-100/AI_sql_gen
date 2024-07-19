@@ -1,8 +1,9 @@
-fastapi
-uvicorn
 openai
-flask
 google-cloud-bigquery
-dotenv
-db-type
 pandas
+scipy
+bs4
+flask 
+dotenv
+python-docx
+db-dtypes
